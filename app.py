@@ -5,11 +5,16 @@ from datetime import date
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import os
 
 app = Flask(__name__)
 
 # Database Config
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///developer.db"
+
+
+basedir = os.path.abspath(os.path.dirname(__file__))
+app.config['SQLALCHEMY_DATABASE_URI'] = \
+    'sqlite:///' + os.path.join(basedir, 'developer.db')
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
