@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="container mt-4">
+        <h2>Edit Log</h2>
+
+        <form method="POST">
+
+            <div class="mb-3">
+                <label>Learning Hours</label>
+                <input type="number" name="learning_hours" step="0.1" value="{{ log.learning_hours }}" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label>Coding Hours</label>
+                <input type="number" name="coding_hours" step="0.1" value="{{ log.coding_hours }}" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label>Project Hours</label>
+                <input type="number" name="project_hours" step="0.1" value="{{ log.project_hours }}" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label>Entertainment Hours</label>
+                <input type="number" name="entertainment_hours" step="0.1" value="{{ log.entertainment_hours }}" class="form-control">
+            </div>
+
+            <a href="/logs" class="btn btn-secondary"><i class="bi bi-arrow-left"></i> Back to Log</a>
+
+            <button class="btn btn-success"> Update Log</button>
+        </form>
+    </div>
+
+{% endblock %}

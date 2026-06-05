@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-md-6">
+
+        <div class="card shadow">
+            <div class="card-body">
+
+                <h3 class="text-center mb-4"> Add Daily Log</h3>
+
+                <form method="POST">
+
+                    <div class="mb-3">
+                        <label class="form-label">Learning Hours</label>
+                        <input type="number" step="0.1" name="learning_hours" class="form-control" placeholder="e.g. 2">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Coding Hours</label>
+                        <input type="number" step="0.1" name="coding_hours" class="form-control" placeholder="e.g. 3">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Project Hours</label>
+                        <input type="number" step="0.1" name="project_hours" class="form-control" placeholder="e.g. 1.5">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Entertainment Hours</label>
+                        <input type="number" step="0.1" name="entertainment_hours" class="form-control" placeholder="e.g. 1">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">
+                        Save Log
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

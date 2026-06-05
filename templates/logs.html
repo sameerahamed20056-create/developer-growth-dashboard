@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <a href="/add" class="btn btn-primary mb-3">Add New Log</a>
+    <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>DATE</th>
+            <th>LEARNING</th>
+            <th>CODING</th>
+            <th>PROJECT</th>
+            <th>ENTERTAINMENT</th>
+            <th>Actions</th>
+        </tr>
+    
+
+
+    {% for log in logs %}
+
+    <tr>
+        <td>{{ log.log_date }}</td>
+        <td>{{ log.learning_hours }}</td>
+        <td>{{ log.coding_hours }}</td>
+        <td>{{ log.project_hours }}</td>
+        <td>{{ log.entertainment_hours }}</td>
+
+        <td>
+            <a href="/edit/{{ log.id }}" class="btn btn-warning btn-sm">Edit</a>
+            <a href="/delete/{{ log.id }}" class="btn btn-danger btn-sm" onclick="return confirm('Are You sure you want to delete this log?')">Delete</a>
+        </td>
+    </tr>
+
+    {% endfor %}
+</table>
+</div>
+
+{% endblock %}
+    

@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4 text-center"><i class="bi bi-bar-chart-line-fill"> Developer Growth Dashboard</i></h2>
+
+    <div class="row">
+
+        <div class="col-md-4 mb-3">
+
+            <div class="card text-white bg-primary">
+
+                <div class="card-body">
+
+                    <h5>Total Learning Hours</h5>
+
+                    <h2>{{ total_learning }}</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 mb-3">
+
+            <div class="card text-white bg-success">
+
+                <div class="card-body">
+
+                    <h5>Total Coding Hours</h5>
+
+                    <h2>{{ total_coding }}</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+       <div class="col-md-4 mb-3">
+
+            <div class="card text-white bg-warning">
+
+                <div class="card-body">
+
+                    <h5>Total Project Hours</h5>
+
+                    <h2>{{ total_project }}</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 mb-3">
+
+            <div class="card text-white bg-danger">
+
+                <div class="card-body">
+
+                    <h5>Total Entertainment Hours</h5>
+
+                    <h2>{{ total_entertainment }}</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 mb-3">
+
+            <div class="card text-white bg-dark">
+
+                <div class="card-body">
+
+                    <h5>Total Logs</h5>
+
+                    <h2>{{ total_logs }}</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 mb-3">
+
+            <div class="card text-white bg-secondary">
+
+                <div class="card-body">
+
+                    <h5>Average Learning Hours</h5>
+
+                    <h2>{{ average_learning }}</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+     
+     </div>
+
+     <hr>
+
+     <div class="text-center mt-4">
+        <img src="{{ url_for('static',filename='chart.png')}}" class="img-fluid">
+    </div>
+
+     <div class="text-center mt-4">
+        <img src="{{ url_for('static',filename='pie_chart.png')}}" class="img-fluid">
+    </div>
+
+{% endblock %}
